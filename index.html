@@ -1,0 +1,149 @@
+<!DOCTYPE html>
+<html lang="en">
+
+<head>
+    <meta charset="UTF-8">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <title>MSU-Best | Torzini</title>
+    <link rel="stylesheet" href="css/jarallax.css">
+    <link rel="stylesheet" href="css/style.css">
+    <!-- <link rel="stylesheet" href="css/style2.css"> -->
+    <!-- 
+        There are 2 designs here: 
+        - use style.css + img.id=bg in panorama class, + app.js script at the bottom OR
+        - use style2.css, 
+            1. comment out img.id=bg in panorama class (there's a bg img in css style2),
+            2. uncomment img-right (may use the other img-left too)
+            3. app2.js script at the bottom 
+     -->
+</head>
+
+<body>
+    <section class="panorama">
+        <!-- img for style1 -->
+        <img id="bg" src="images/living-rm2.jpg" alt="kitchen">
+        <!-- comment out this img when using style2/app2 -->
+        <img id="img-left" src="images/k-light.png" alt="livingroom left">
+
+        <!-- img for style2 -->
+        <!-- <img id="img-left" src="images/living-rm2-l.jpg" alt="livingroom left">
+        <img id="img-right" src="images/living-rm2-r.jpg" alt="livingroom right"> -->
+        <!-- img for style2 End -->
+        <img id="text" src="images/zini-text-g3.png" alt="text msg">
+    </section>
+    <header>
+        <h1><a href="#home">Zini Group</a></h1>
+        <div class="menuToggle" onclick="toggleMenu();"></div>
+        <nav>
+            <ul class="navi">
+                <li><a href="#home" onclick="toggleMenu();">Home</a></li>
+                <li>
+                    <a href="#interior" onclick="toggleMenu();">Cabinets</a></li>
+                <li>
+                    <a href="#tile" onclick="toggleMenu();">Tiling</a></li>
+                <li>
+                    <a href="#about" onclick="toggleMenu();">About</a></li>
+                <li>
+                    <a href="#contact" onclick="toggleMenu();">Contact Us</a></li>
+                <li>
+                    <a href="#register" onclick="toggleMenu();">Subscribe</a></li>
+            </ul>
+        </nav>
+    </header>
+    <section class="content">
+        <h2>We take care of all your home decoration needs.</h2>
+        <p>Lorem ipsum dolor, sit amet consectetur adipisicing elit. Beatae ducimus quam nesciunt, consectetur vitae magni cumque deleniti reiciendis fugiat, natus qui dolorem ea omnis nam animi esse earum exercitationem assumenda! Lorem ipsum dolor sit
+            amet consectetur, adipisicing elit. Vitae accusantium dignissimos quia ex, recusandae magnam ab ullam quis animi officia omnis rerum dolorem consequatur enim accusamus amet, cum a adipisci.
+        </p>
+    </section>
+    <main>
+
+        <section>
+            <div class="box">
+                <h2 data-jarallax-element="0 -200">The Kitchen of your Dream</h2>
+                <div class="content">
+                    <div class="imgBx jarallax">
+                        <img class="jarallax-img" src="images/k-cabinet1.jpg" alt="bg cabinet1">
+                    </div>
+                    <div class="description" data-jarallax-element="-200 0">
+                        <p>Lorem ipsum dolor sit amet consectetur adipisicing elit. Vero amet accusamus quod consequatur voluptatibus, et itaque, id laudantium quibusdam incidunt nam? </p>
+                    </div>
+                </div>
+            </div>
+        </section>
+        <section>
+            <div class="box">
+                <h2 data-jarallax-element="0 -200">Dream Stainless Steel Kitchen</h2>
+                <div class="content">
+                    <div class="imgBx jarallax">
+                        <img class="jarallax-img" src="images/k-cabinet2.jpg" alt="bg cabinet2">
+                    </div>
+                    <div class="description" data-jarallax-element="-200 0">
+                        <p>Lorem ipsum dolor sit amet consectetur adipisicing elit. Vero amet accusamus quod consequatur voluptatibus, et itaque, id laudantium quibusdam incidunt nam?</p>
+                    </div>
+                </div>
+            </div>
+        </section>
+        <section>
+            <div class="box">
+                <h2 data-jarallax-element="0 -200">A Dream Mahogani Kitchen</h2>
+                <div class="content">
+                    <div class="imgBx jarallax">
+                        <img class="jarallax-img" src="images/k-cabinet3.jpg" alt="bg cabinet3">
+                    </div>
+                    <div class="description" data-jarallax-element="-200 0">
+                        <p>Lorem ipsum dolor sit amet consectetur adipisicing elit. Vero amet accusamus quod consequatur voluptatibus, et itaque, id laudantium quibusdam incidunt nam?</p>
+                    </div>
+                </div>
+            </div>
+        </section>
+        <section>
+            <div class="box">
+                <h2 data-jarallax-element="0 -200">Your Dream Livingroom</h2>
+                <div class="content">
+                    <div class="imgBx jarallax">
+                        <img class="jarallax-img" src="images/living-rm2.jpg" alt="bg cabinet1">
+                    </div>
+                    <div class="description" data-jarallax-element="-200 0">
+                        <p>Lorem ipsum dolor sit amet consectetur adipisicing elit. Vero amet accusamus quod consequatur voluptatibus, et itaque, id laudantium quibusdam incidunt nam?</p>
+                    </div>
+                </div>
+            </div>
+        </section>
+    </main>
+    <footer>
+
+    </footer>
+
+
+    <script src="js/app.js"></script>
+    <!-- <script src="js/app2.js"></script> -->
+    <script src="js/jarallax.js"></script>
+    <script src="js/jarallax-element.js"></script>
+
+    <script type="text/javascript">
+        // add sticky to the active class
+        window.addEventListener('scroll', function() {
+            const header = document.querySelector('header');
+            header.classList.toggle("sticky", window.scrollY > 0);
+        });
+
+        // toggle the menu open and close
+        function toggleMenu() {
+            const menuToggle = document.querySelector('.menuToggle');
+            const navigation = document.querySelector('.navi');
+            menuToggle.classList.toggle('active');
+            navigation.classList.toggle('active');
+        }
+    </script>
+
+    <script type="text/javascript">
+        jarallax(document.querySelectorAll('.jarallax'), {
+            speed: 0.5
+                // 0.2
+        });
+    </script>
+
+</body>
+
+</html>

@@ -1,0 +1,141 @@
+@import "header.css";
+@import"main.css";
+@import url('https://fonts.googleapis.com/css2?family=Montserrat:wght@300;400;500;600;700;800;900&family=Poppins:ital,wght@0,200;0,300;0,400;0,500;0,600;0,700;0,800;0,900;1,200;1,300&family=Roboto:ital,wght@0,100;0,300;0,400;0,500;0,700;0,900;1,300&display=swap');
+:root {
+    --ff: 'Montserrat', sans-serif;
+    --ff-h: 'Roboto', sans-serif;
+    --primary-clr: #0a2a43;
+    --primary-clr-n: rgba(51, 51, 51, 0.623);
+    --secondary-clr: #7790a3;
+    --secondary-clr-t: rgba(119, 144, 163, 0.863);
+    --secondary-clr-n: #fff;
+    --secondary-clr-dark: #008b8b;
+    --secondary-clr-light: #daa520;
+    --accent-clr: #4ac7ff;
+}
+
+* {
+    margin: 0;
+    padding: 0;
+    box-sizing: border-box;
+    font-family: var(--ff);
+}
+
+body {
+    background: var(--primary-clr);
+    min-height: 1500px;
+}
+
+section.panorama {
+    position: relative;
+    width: 100%;
+    height: 100vh;
+    overflow: hidden;
+    display: flex;
+    justify-content: center;
+    align-items: center;
+}
+
+section.panorama::before {
+    content: '';
+    position: absolute;
+    bottom: 0;
+    width: 100%;
+    height: 10%;
+    background: linear-gradient(to top, var(--secondary-clr), transparent);
+    z-index: 10000;
+}
+
+section.panorama::after {
+    content: '';
+    position: absolute;
+    top: 0;
+    left: 0;
+    width: 100%;
+    height: 40%;
+    background: var(--primary-clr);
+    z-index: 10000;
+    mix-blend-mode: color;
+}
+
+section.panorama img {
+    position: absolute;
+    top: 0;
+    left: 0;
+    width: 100%;
+    height: 100%;
+    object-fit: cover;
+    pointer-events: none;
+}
+
+#text {
+    position: relative;
+    z-index: 1;
+}
+
+
+/* #floor {
+    z-index: 2;
+} */
+
+
+/* header section moved */
+
+.content h2 {
+    margin: 0;
+    padding: 0;
+    font-size: 2em;
+    /* font-family: 'Roboto', sans-serif; */
+    font-weight: 600;
+    padding: 0.2em 1.5em;
+    color: var(--secondary-clr-dark);
+}
+
+.content p {
+    font-size: 1.2rem;
+    margin-bottom: 1em;
+    padding: 0.2em 3rem;
+    line-height: 1.5em;
+    color: var(--secondary-clr-n);
+    /* font-family: 'Poppins', serif; */
+}
+
+@media (max-width: 991px) {
+    header h1 a {
+        font-size: 15vw;
+        color: var(--secondary-clr-light);
+    }
+    section .box .content .imgBx img {
+        max-width: 100%;
+        max-height: auto;
+    }
+    .content h2 {
+        font-size: 1.3em;
+    }
+    section.panorama img#text {
+        display: none;
+    }
+}
+
+
+/* make images  fit
+img {
+    max-width: 100%;
+    max-height: 100%;
+}
+
+.portrait {
+    height: 80px;
+    width: 30px;
+}
+
+.landscape {
+    height: 30px;
+    width: 80px;
+}
+
+.square {
+    height: 75px;
+    width: 75px;
+}
+ */
