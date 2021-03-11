@@ -8,7 +8,7 @@ This is a static site for a furniture company
 * Parallax, Jarallax
 
 # How To Use
-There are 2 different designs in this app which can used from the CSS files
+There are 2 different designs in this app which can be used from the CSS folder
 * The first design, current one uses style.css
 * # To See The Second Design, use style2.css, 
             - comment out img > id=bg in panorama class (there's a bg img in css style2),
