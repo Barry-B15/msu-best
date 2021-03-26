@@ -22,6 +22,19 @@
 </head>
 
 <body>
+    <!-- FB SDK -->
+    <!-- <script>
+        window.fbAsyncInit = function() {
+            FB.init({
+                appId: 'your-app-id',
+                autoLogAppEvents: true,
+                xfbml: true,
+                version: 'v10.0'
+            });
+        };
+    </script>
+    <script async defer crossorigin="anonymous" src="https://connect.facebook.net/en_US/sdk.js"></script> -->
+    <!-- FB SDK End -->
     <section class="panorama">
         <!-- img for style1 -->
         <img id="bg" src="images/living-rm2.jpg" alt="kitchen">
@@ -35,7 +48,7 @@
         <img id="text" src="images/zini-text-g3.png" alt="text msg">
     </section>
     <header>
-        <h1><a href="#home">Zini Group</a></h1>
+        <!-- <h1><a href="#home">Zini Group</a></h1> -->
         <div class="menuToggle" onclick="toggleMenu();"></div>
         <nav>
             <ul class="navi">
@@ -165,6 +178,16 @@
                 </div>
             </div>
         </section>
+        <div class="message">
+            <h3>Message Us</h3>
+            <form action="message">
+                <input type="text" name="fname" placeholder="First Name">
+                <input type="text" name="sname" placeholder="Last Name">
+                <input type="text" name="email" placeholder="Email">
+                <textarea name="get-quotation" id="quotation" cols="30" rows="10" placeholder="Enter a Message"></textarea>
+                <button>Send</button>
+            </form>
+        </div>
     </main>
     <footer>
         <div class="about footer">
@@ -180,11 +203,15 @@
         <div class="contact footer">
             <h3>Contact</h3>
             <ul>
-                <li>Email:
-                    <a href="#">example@msubest.okori</a>
+                <li>
+
+                    <a href="mailto:okbtorn@gmail.com">
+                        <i class="fa fa-envelope-o" aria-hidden="true"></i> Send an Email</a>
                 </li>
-                <li>Phone: 090-1234-5678
-                </li>
+
+                <li>
+
+                    <a href="tel:+819088910562" class="phone"><i class="fa fa-phone-square" aria-hidden="true"></i> +81-2345-6789</a></li>
             </ul>
         </div>
         <div class="social footer">
@@ -204,6 +231,9 @@
                 </li>
             </ul>
         </div>
+        <p class="copyright">
+            All rights reserved &copy;Torzini 2021
+        </p>
 
     </footer>
 

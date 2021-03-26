@@ -47,9 +47,12 @@ footer .social ul {
 footer .social li a {
     list-style-type: none;
     position: relative;
-    width: 2em;
+    /* width: 2em;
     height: 2em;
-    margin-left: 5px;
+    margin-left: 5px; */
+    width: 1.5em;
+    height: 1.5em;
+    margin-left: 10px;
     border: 1px solid rgba(255, 255, 255, 0.4);
     border-radius: 10px;
     /* display: inline-block; */
@@ -69,19 +72,52 @@ footer .social li a {
     overflow: hidden;
 }
 
+footer .social li a:hover {
+    transform: translateY(-6px) scale(1.2);
+}
+
 footer .contact {
     line-height: 2em;
 }
 
-@media (max-width: 487px) {
+footer .contact li {
+    margin: 0.8em;
+}
+
+footer .contact li a {
+    padding: 0.5em;
+    border: 1px solid rgba(255, 255, 255, 0.4);
+    border-radius: 10px;
+}
+
+.about li:hover {
+    transform: translateX(1.5em) scale(1.5);
+}
+
+.contact li:hover {
+    transform: translateX(1.5em);
+}
+
+
+/* message form moved to main.css */
+
+
+/* footer .contact .phone {
+    padding: 0.5em;
+    border-bottom: 1px solid rgba(255, 255, 255, 0.4);
+    border-radius: 10px;
+} */
+
+@media (max-width: 468px) {
     footer {
         padding: 1.5em 0;
         margin: 0;
+        min-width: 260px;
     }
     /* footer .social ul {
         flex-direction: column;
     } */
-    footer .social li {
+    footer .social li a {
         font-size: 1.5em;
         margin-top: 0.6em;
     }
