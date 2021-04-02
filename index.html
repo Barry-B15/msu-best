@@ -53,16 +53,16 @@
         <nav>
             <ul class="navi">
                 <li><a href="#home" onclick="toggleMenu();">Home</a></li>
-                <li>
-                    <a href="#interior" onclick="toggleMenu();">Cabinets</a></li>
-                <li>
-                    <a href="#tile" onclick="toggleMenu();">Tiling</a></li>
-                <li>
-                    <a href="#about" onclick="toggleMenu();">About</a></li>
-                <li>
-                    <a href="#contact" onclick="toggleMenu();">Contact Us</a></li>
-                <li>
-                    <a href="#register" onclick="toggleMenu();">Subscribe</a></li>
+                <li><a href="#tile" onclick="toggleMenu();">Products</a></li>
+                <li><a href="#living" onclick="toggleMenu();">LivingRoom</a></li>
+                <li><a href="#kitchen" onclick="toggleMenu();">Kitchen</a></li>
+                <li><a href="#dinning" onclick="toggleMenu();">Dinning</a></li>
+                <li><a href="#bedroom" onclick="toggleMenu();">Beds</a></li>
+
+                <!-- <li><a href="#interior" onclick="toggleMenu();">Cabinets</a></li> -->
+                <!-- <li><a href="#about" onclick="toggleMenu();">About</a></li> -->
+                <!-- <li><a href="#contact" onclick="toggleMenu();">Contact Us</a></li> -->
+                <!-- <li><a href="#register" onclick="toggleMenu();">Subscribe</a></li> -->
             </ul>
         </nav>
     </header>
@@ -79,17 +79,28 @@
                 <h2 data-jarallax-element="0 -200">The Kitchen of your Dream</h2>
                 <div class="content">
                     <div class="imgBx jarallax">
-                        <img class="jarallax-img" src="images/k-cabinet1.jpg" alt="bg cabinet1">
+                        <!-- <img class="jarallax-img" src="images/k-cabinet1.jpg" alt="bg cabinet1"> -->
+                        <img class="jarallax-img" src="images/msu-w2w-cab-blk2.png" alt="bg cabinet1">
                     </div>
                     <div class="description" data-jarallax-element="-200 0">
-                        <p>Lorem ipsum dolor sit amet consectetur adipisicing elit. Vero amet accusamus quod consequatur voluptatibus, et itaque, id laudantium quibusdam incidunt nam? </p>
+                        <!-- <p>
+                            Item No:<br> Name: <br> Size: <br> Price: Request
+                        </p> -->
+                        <ul>
+                            <li>Item No:</li>
+                            <li>Name:</li>
+                            <li>Dimension:</li>
+                            <li>Price:
+                                <input type="button" value="Request" class="request-price">
+                            </li>
+                        </ul>
                     </div>
                 </div>
             </div>
         </section>
         <section>
             <div class="box">
-                <h2 data-jarallax-element="0 -200">Dream Stainless Steel Kitchen</h2>
+                <h2 data-jarallax-element="0 -200">Stainless Steel Kitchen</h2>
                 <div class="content">
                     <div class="imgBx jarallax">
                         <img class="jarallax-img" src="images/k-cabinet2.jpg" alt="bg cabinet2">
@@ -154,10 +165,10 @@
         </section>
         <section>
             <div class="box">
-                <h2 data-jarallax-element="0 -200">Your Dream Livingroom</h2>
+                <h2 data-jarallax-element="0 -200">Wall to Wall Kitchen Cabinet</h2>
                 <div class="content">
                     <div class="imgBx jarallax">
-                        <img class="jarallax-img" src="images/msu-w2w-cab4.jpg" alt="bg cabinet1">
+                        <img class="jarallax-img" src="images/msu-w2w-cab-mlk.png" alt="bg cabinet1">
                     </div>
                     <div class="description" data-jarallax-element="-200 0">
                         <p>Lorem ipsum dolor sit amet consectetur adipisicing elit. Vero amet accusamus quod consequatur voluptatibus, et itaque, id laudantium quibusdam incidunt nam?</p>
@@ -167,10 +178,25 @@
         </section>
         <section>
             <div class="box">
-                <h2 data-jarallax-element="0 -200">Your Dream Livingroom</h2>
+                <h2 data-jarallax-element="0 -200">Your Dream Kitchen</h2>
                 <div class="content">
                     <div class="imgBx jarallax">
-                        <img class="jarallax-img" src="images/msu-cab-3.jpg" alt="bg cabinet1">
+                        <!-- <img class="jarallax-img" src="images/msu-cab-3.jpg" alt="bg cabinet1"> -->
+                        <img class="jarallax-img" src="images/msu-w2w-cab-blk3.png" alt="bg cabinet1">
+                    </div>
+                    <div class="description" data-jarallax-element="-200 0">
+                        <p>Lorem ipsum dolor sit amet consectetur adipisicing elit. Vero amet accusamus quod consequatur voluptatibus, et itaque, id laudantium quibusdam incidunt nam?</p>
+                    </div>
+                </div>
+            </div>
+        </section>
+        <section>
+            <div class="box">
+                <h2 data-jarallax-element="0 -200">Your Dream Kitchen</h2>
+                <div class="content">
+                    <div class="imgBx jarallax">
+
+                        <img class="jarallax-img" src="images/msu-w2w-cab2.png" alt="bg cabinet1">
                     </div>
                     <div class="description" data-jarallax-element="-200 0">
                         <p>Lorem ipsum dolor sit amet consectetur adipisicing elit. Vero amet accusamus quod consequatur voluptatibus, et itaque, id laudantium quibusdam incidunt nam?</p>
@@ -179,71 +205,78 @@
             </div>
         </section>
         <div class="message">
-            <h3>Message Us</h3>
+            <h3 class="form-title">Message Us</h3>
             <form action="message">
                 <input type="text" name="fname" placeholder="First Name">
                 <input type="text" name="sname" placeholder="Last Name">
                 <input type="text" name="email" placeholder="Email">
                 <textarea name="get-quotation" id="quotation" cols="30" rows="10" placeholder="Enter a Message"></textarea>
-                <button>Send</button>
+                <div class="btn ">
+                    <button class="send" onclick="closeMessage();">Send</button>
+                    <input type="button" value="X Cancel" id="btn_cancel">
+                </div>
+
             </form>
         </div>
     </main>
     <footer>
-        <div class="about footer">
-            <h3>About</h3>
-            <ul>
-                <li><a href="#">About</a></li>
-                <li><a href="#">Services</a></li>
-                <li><a href="#">Mission</a></li>
-                <li><a href="#">Portfolio</a></li>
+        <div class="footer-top ">
+            <div class="about footer ">
+                <h3>About</h3>
+                <ul>
+                    <li><a href="# ">About</a></li>
+                    <li><a href="# ">Services</a></li>
+                    <li><a href="# ">Mission</a></li>
+                    <li><a href="# ">Portfolio</a></li>
 
-            </ul>
+                </ul>
+            </div>
+            <div class="contact footer">
+                <h3>Contact</h3>
+                <ul>
+                    <li>
+                        <!-- <a href="" class="email"> -->
+                        <a href="mailto:okbtorn@gmail.com " class="email ">
+                            <i class="fa fa-envelope-o " aria-hidden="true "></i> Send an Email</a>
+                    </li>
+
+                    <li>
+                        <a href="tel:+819088910562 " class="phone ">
+                            <i class="fa fa-phone-square " aria-hidden="true "></i> +81-2345-6789</a>
+                    </li>
+                </ul>
+            </div>
+            <div class="social footer ">
+                <h3>Social Contact</h3>
+                <ul>
+                    <li>
+                        <a href="# "><i class="fa fa-facebook " aria-hidden="true "></i></a>
+                    </li>
+                    <li>
+                        <a href="# "><i class="fa fa-twitter " aria-hidden="true "></i></a>
+                    </li>
+                    <li>
+                        <a href="# "><i class="fa fa-instagram " aria-hidden="true "></i></a>
+                    </li>
+                    <li>
+                        <a href="# "><i class="fa fa-whatsapp " aria-hidden="true "></i></a>
+                    </li>
+                </ul>
+            </div>
         </div>
-        <div class="contact footer">
-            <h3>Contact</h3>
-            <ul>
-                <li>
-
-                    <a href="mailto:okbtorn@gmail.com">
-                        <i class="fa fa-envelope-o" aria-hidden="true"></i> Send an Email</a>
-                </li>
-
-                <li>
-
-                    <a href="tel:+819088910562" class="phone"><i class="fa fa-phone-square" aria-hidden="true"></i> +81-2345-6789</a></li>
-            </ul>
-        </div>
-        <div class="social footer">
-            <h3>Social Contact</h3>
-            <ul>
-                <li>
-                    <a href="#"><i class="fa fa-facebook" aria-hidden="true"></i></a>
-                </li>
-                <li>
-                    <a href="#"><i class="fa fa-twitter" aria-hidden="true"></i></a>
-                </li>
-                <li>
-                    <a href="#"><i class="fa fa-instagram" aria-hidden="true"></i></a>
-                </li>
-                <li>
-                    <a href="#"><i class="fa fa-whatsapp" aria-hidden="true"></i></a>
-                </li>
-            </ul>
-        </div>
-        <p class="copyright">
-            All rights reserved &copy;Torzini 2021
+        <p class="copyright ">
+            &copy;Torzini 2021 All Rights Reserved
         </p>
 
     </footer>
 
 
     <script src="js/app.js"></script>
-    <!-- <script src="js/app2.js"></script> -->
+    <!-- <script src="js/app2.js "></script> -->
     <script src="js/jarallax.js"></script>
     <script src="js/jarallax-element.js"></script>
 
-    <script type="text/javascript">
+    <script type="text/javascript ">
         // add sticky to the active class
         window.addEventListener('scroll', function() {
             const header = document.querySelector('header');
@@ -258,8 +291,32 @@
             navigation.classList.toggle('active');
         }
     </script>
-
+    <!-- Trying to handle toggle form -->
     <script type="text/javascript">
+        // get the ids
+        const email = document.querySelector('.email');
+        const message = document.querySelector('.message');
+
+        // add listeners
+        email.addEventListener('click', sendMessage);
+
+        // show the form
+        function sendMessage() {
+            message.classList.add("active");
+            email.classList.add("active");
+        }
+        // get the id, add listener and show the form
+        const cancel = document.getElementById("btn_cancel");
+
+        cancel.addEventListener('click', cancelForm);
+        // func to remove active state so the form will hide
+        function cancelForm() {
+            message.classList.remove('active');
+            email.classList.remove('active');
+        }
+    </script>
+
+    <script type="text/javascript ">
         jarallax(document.querySelectorAll('.jarallax'), {
             speed: 0.5
                 // 0.2
@@ -269,3 +326,6 @@
 </body>
 
 </html>
+<!-- 
+    Msubest Furniture : Let Us Design Your Dream Home
+ -->

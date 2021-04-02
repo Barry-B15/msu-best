@@ -28,7 +28,7 @@ main {
 main::before {
     content: 'Zini Living';
     position: fixed;
-    top: 50%;
+    top: 45%;
     left: 50%;
     transform: translate(-50%, -50%);
     width: 90%;
@@ -49,9 +49,11 @@ main section {
 main section h2 {
     margin-left: 200px;
     /* font-size: 3em; */
-    font-size: 2.5em;
+    /* font-size: 2.5em; */
+    font-size: 2.8em;
     color: var(--secondary-clr-n);
-    margin-bottom: 20px;
+    /* margin-bottom: 20px; */
+    margin: 1.5em 0 0.5em 1.5em;
 }
 
 main section .box {
@@ -73,7 +75,8 @@ main section:nth-child(even) .content {
 main section .content .imgBx {
     position: relative;
     width: 800px;
-    height: 400px;
+    /* height: 400px; */
+    height: 450px;
     overflow: hidden;
     box-shadow: 0 25px 35px rgba(0, 0, 0, 0.1);
 }
@@ -101,6 +104,11 @@ main section .content .description {
     border-bottom: 6px solid var(--accent-clr);
 }
 
+main section .content .description li {
+    list-style-type: none;
+    padding: 0.5em 1em;
+}
+
 main section:nth-child(even) .content .description {
     left: 0;
 }
@@ -108,18 +116,27 @@ main section:nth-child(even) .content .description {
 
 /* message form */
 
-main .message {
+.message {
     width: 600px;
-    padding: 2em;
+    height: 450px;
+    padding: 1em 2em;
     background: #fff;
+    background: linear-gradient(to right bottom, blue, var(--primary-clr), var(--secondary-clr-n), red);
+    /* background: rgba(0, 0, 0, 0.644); */
+    /* background: rgba(255, 255, 255, 0.808); */
+    /* background: var(--primary-clr); */
+    opacity: 0.9;
     position: fixed;
-    bottom: 2em;
-    right: -35em;
-    /* thinking to slide it in when clicked
-    which ?
-     opacity: 1; ?*/
-    /* right: 1em; */
+    top: 100%;
+    right: -60%;
+    transition: 2s ease-out;
     z-index: 100000;
+}
+
+.message.active {
+    top: 10%;
+    right: 10%;
+    transition: 2s ease-in;
 }
 
 .message h3 {
@@ -136,13 +153,35 @@ input {
     padding: .5em;
     font-size: 1em;
     margin-bottom: 0.8em;
+    /* background: rgba(0, 0, 0, 0.644); */
+    /* background: rgba(255, 255, 255, 0.808); */
+    background: var(--secondary-clr-n);
+    opacity: 0.9;
+    backdrop-filter: blur(10px);
 }
 
-button {
+#quotation {
+    padding: 0.5em;
+    font-size: 0.86em;
+    /* background: rgba(255, 255, 255, 0.808); */
+    /* background: rgba(0, 0, 0, 0.644); */
+    background: var(--secondary-clr-n);
+    backdrop-filter: blur(10px);
+}
+
+.btn {
+    display: flex;
+    justify-content: space-between;
+    align-items: center;
+}
+
+button,
+.request-price,
+#btn_cancel {
     width: 7rem;
-    height: 3em;
-    margin-top: 0.8em;
-    font-size: 1.3em;
+    height: 2.3em;
+    margin-top: 0.3em;
+    font-size: 1.1em;
     color: var(--secondary-clr-n);
     background: var(--primary-clr);
     border: 2px solid var(--accent-clr);
@@ -152,6 +191,14 @@ button {
 
 button:hover {
     color: var(--accent-clr);
+}
+
+#cancel {
+    display: inline-block;
+    padding: 0.6em 0.5em;
+    text-align: center;
+    color: red;
+    cursor: pointer;
 }
 
 

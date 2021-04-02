@@ -10,6 +10,7 @@ header {
     position: sticky;
     top: 0;
     right: 0;
+    z-index: 10000;
 }
 
 nav {
@@ -31,17 +32,20 @@ nav .navi li a {
     display: inline-block;
     margin-left: 0.5rem;
     text-decoration: none;
-    color: var(--secondary-clr);
     font-weight: 400;
-    background: var(--secondary-clr-n);
-    padding: 0.2rem 0.4rem;
+    background: var(--primary-clr-n);
+    color: var(--secondary-clr-n);
+    filter: brightness(90%);
+    padding: 0.5rem 0.4rem;
     border-radius: 0.5rem;
     cursor: pointer;
 }
 
 nav .navi li a:hover {
-    border-bottom: 3px solid var(--secondary-clr-dark);
-    color: #ff000f;
+    /* border-right: 2px solid var(--accent-clr); */
+    color: var(--secondary-clr-light);
+    transform: translateY(-6px);
+    background: #444;
 }
 
 header h1 {
