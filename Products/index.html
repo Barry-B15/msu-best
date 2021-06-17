@@ -32,7 +32,6 @@
 
         </section>
         <header>
-
             <!-- <h1><a href="#home">Zini Group</a></h1> -->
             <div class="menuToggle" onclick="toggleMenu();"></div>
             <nav>
@@ -51,13 +50,13 @@
                 </ul>
             </nav>
         </header>
-        <section class="content top">
-            <h2>Let us design your dream home.</h2>
-            <p>Lorem ipsum dolor, sit amet consectetur adipisicing elit. Beatae ducimus quam nesciunt, consectetur vitae magni cumque deleniti reiciendis fugiat, natus qui dolorem ea omnis nam animi esse earum exercitationem assumenda! Lorem ipsum dolor.
-            </p>
-        </section>
         <main>
-            <div class="feature">
+            <section class="content top">
+                <h2>Let us design your dream home.</h2>
+                <p>Lorem ipsum dolor, sit amet consectetur adipisicing elit. Beatae ducimus quam nesciunt, consectetur vitae magni cumque deleniti reiciendis fugiat, natus qui dolorem ea omnis nam animi esse earum exercitationem assumenda! Lorem ipsum dolor.
+                </p>
+            </section>
+            <article class="feature">
                 <div class="content">
                     <h2 class="title">Wall to Wall Kitchen Cabinet</h2>
                     <div class="details">
@@ -77,8 +76,8 @@
                         </div>
                     </div>
                 </div>
-            </div>
-            <div class="feature">
+            </article>
+            <article class="feature">
                 <div class="content">
                     <h2 class="title">Upholstery Set</h2>
                     <div class="details">
@@ -98,8 +97,8 @@
                         </div>
                     </div>
                 </div>
-            </div>
-            <div class="feature">
+            </article>
+            <article class="feature">
                 <div class="content">
                     <h2 class="title">Wooden Cabinet</h2>
                     <div class="details">
@@ -108,7 +107,7 @@
                         </div>
                         <div class="description">
                             <ul>
-                                <li>Item No: MSU-CAB-0001</li>
+                                <li>Item No: MSU-CAB-BLK-0001</li>
                                 <li>Name: Cabinet</li>
                                 <li>Dimension:</li>
                                 <li>Description:</li>
@@ -119,7 +118,28 @@
                         </div>
                     </div>
                 </div>
-            </div>
+            </article>
+            <article class="feature">
+                <div class="content">
+                    <h2 class="title">Dream Wall to Wall Cabinet</h2>
+                    <div class="details">
+                        <div class="imgBox">
+                            <img class="left-img" src="../images/msu-w2w-cab-blk2.png" alt="bg cabinet1">
+                        </div>
+                        <div class="description">
+                            <ul>
+                                <li>Item No: MSU-W2W-CAB-0001</li>
+                                <li>Name: Cabinet</li>
+                                <li>Dimension:</li>
+                                <li>Description:</li>
+                                <li>
+                                    <input type="button" value="Request Price" class="request-price">
+                                </li>
+                            </ul>
+                        </div>
+                    </div>
+                </div>
+            </article>
 
             <div class="message">
                 <h3 class="form-title">Message Us</h3>
@@ -132,7 +152,6 @@
                         <button class="send" onclick="closeMessage();">Send</button>
                         <input type="button" value="X Cancel" id="btn_cancel">
                     </div>
-
                 </form>
             </div>
         </main>
@@ -188,6 +207,17 @@
     </footer>
 
     <script src="../js/app.js"></script>
+
+    <!-- draggable section start -->
+    <script src="https://code.jquery.com/jquery-1.12.4.js"></script>
+    <script src="https://code.jquery.com/ui/1.12.1/jquery-ui.js"></script>
+    <script>
+        $(function() {
+            $(".message").draggable();
+
+        });
+    </script>
+    <!-- draggable section End -->
 </body>
 
 </html>

@@ -44,6 +44,7 @@ const email = document.querySelector('.email');
 const message = document.querySelector('.message');
 // const requestPrices = document.querySelectorAll(".request-price");
 
+
 const cancel = document.getElementById("btn_cancel");
 
 //To Do : May need to use querySelectorAll for email and loop thru it
@@ -57,6 +58,7 @@ for (let i = 0; i < requestPrices.length; i++) {
         requestPrices[i].addEventListener('click', sendMessage);
     } else {
         requestPrices[i].addEventListener('click', cancelForm);
+
     }
 }
 
@@ -72,5 +74,9 @@ function cancelForm() {
     message.classList.remove('active');
     email.classList.remove('active');
     // requestPrices[i].remove('active');
+
+    // close the form after dragging
+    message.style.left = null;
+    message.style.top = null;
 }
 // End form handle
