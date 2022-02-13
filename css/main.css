@@ -22,6 +22,8 @@ main {
     overflow: hidden;
     color: #111;
     background: var(--primary-clr);
+    flex: 1;
+    /*flex: 1 makes the footer stick to the bottom even when main is empty */
 }
 
 main::before {

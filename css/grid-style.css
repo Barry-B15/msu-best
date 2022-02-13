@@ -1,0 +1,197 @@
+@import url('https://fonts.googleapis.com/css2?family=Bungee&family=Bungee+Shade&family=Heebo:wght@100;200;300;400;500;600;700;800;900&display=swap');
+@import url('https://fonts.googleapis.com/css2?family=Montserrat:wght@300;400;500;600;700;800;900&family=Poppins:ital,wght@0,200;0,300;0,400;0,500;0,600;0,700;0,800;0,900;1,200;1,300&family=Roboto:ital,wght@0,100;0,300;0,400;0,500;0,700;0,900;1,300&display=swap');
+:root {
+    --ff: 'Montserrat', sans-serif;
+    --ff-h: 'Roboto', sans-serif;
+    --primary-clr: #0a2a43;
+    --primary-clr-n: rgba(51, 51, 51, 0.623);
+    --secondary-clr: #7790a3;
+    --secondary-clr-t: rgba(119, 144, 163, 0.863);
+    --secondary-clr-n: #fff;
+    --secondary-clr-dark: #008b8b;
+    --secondary-clr-light: #daa520;
+    --accent-clr: #4ac7ff;
+    --spacer: 1rem;
+    /* --secondary-clr-light: #0ff; */
+}
+
+* {
+    padding: 0;
+    margin: 0;
+    font-family: var(--ff);
+}
+
+body {
+    min-height: 100vh;
+    text-rendering: optimizeSpeed;
+    line-height: 1.5;
+    background: var(--primary-clr);
+}
+
+header {
+    width: 95%;
+}
+
+h1,
+h2 {
+    color: var(--secondary-clr-light);
+}
+
+main {
+    padding: 100px 300px;
+    padding: 0 1em;
+    overflow: hidden;
+    /* color: #111; */
+    background: var(--primary-clr);
+    flex: 1;
+    /*flex: 1 makes the footer stick to the bottom even when main is empty */
+}
+
+.content h2 {
+    margin: 0;
+    padding: 0;
+    padding: 0 2em;
+    font-size: 2em;
+    /* font-family: 'Roboto', sans-serif; */
+    font-weight: 600;
+    padding: 0.2em 1.5em;
+    color: var(--secondary-clr-dark);
+}
+
+.card p {
+    color: var(--secondary-clr-n);
+}
+
+.content p {
+    font-size: 1.2rem;
+    margin-bottom: 1em;
+    padding: 0.2em 3rem;
+    line-height: 1.5em;
+    color: var(--secondary-clr-n);
+    /* font-family: 'Poppins', serif; */
+}
+
+.container {
+    max-width: 100rem;
+    margin-inline: auto;
+    padding-inline: 2rem;
+    /* 
+    max-width: var(--width, 140ch);
+    margin-inline: auto;
+    padding-inline: var(--spacer);
+     */
+}
+
+.stacked {
+    display: grid;
+}
+
+
+/* stack content on top of each other
+can be used in hero and other areas
+the content are stacked the 2nd on top of the first item in the DOM */
+
+.stacked>* {
+    /* select any direct child of the stacked */
+    grid-column: 1 / 2;
+    grid-row: 1 / 2;
+}
+
+.product-grid {
+    display: grid;
+    gap: 0.225rem;
+    grid-template-columns: repeat(auto-fit, minmax(15rem, 1fr));
+    padding: 0;
+    margin: 0;
+    /* automatically fit the content, 
+    with min size 15rem(has to be small to get on small screens) and max size 1fr*/
+}
+
+.card {
+    aspect-ratio: 1 / 1.5;
+    /* border: 3px solid hotpink; */
+}
+
+.card__content {
+    background: hsl(0, 0%, 0%, 0.45);
+    align-self: end;
+    margin: 0.5rem 0.5rem 2rem;
+    padding: 0.5rem;
+    box-shadow: 0 0.25rem 1rem rgb(0 0 0 / 0.1);
+    border-radius: .3rem;
+}
+
+.card__title {
+    font-size: 1.25rem;
+    line-height: 1.1;
+    color: firebrick;
+    font-family: Hoobo, sans-serif;
+}
+
+.card__price {
+    font-size: 1.75rem;
+    font-size: 1.25rem;
+}
+
+.card__ref {
+    /* font-size: 1.05rem; */
+}
+
+.card__img {
+    width: 100%;
+    aspect-ratio: 1 / 1.25;
+    /* aspect-ratio: w/h for the image
+    must have set a width to work */
+    /* object-fit: cover; can be contain for other images  */
+    object-fit: cover;
+    /* prevent the image from being stretched/distorted
+    similar to background-size: cover
+    with this we can bring in any kind of dynamic image */
+    border-radius: 0.5rem;
+}
+
+@media (min-width: 60em) {
+    .card__img {
+        aspect-ratio: 1 / 1;
+    }
+    .card.featured {
+        grid-row: span 2;
+        grid-column: span 2;
+    }
+    .card.featured .card__img {
+        aspect-ratio: 1 / 1.25;
+    }
+    .card.featured .card__title {
+        font-size: 1.75rem;
+    }
+}
+
+p {
+    color: #fff;
+    background: rgba(128, 128, 128, 0.356);
+    padding: 0.25rem;
+    border-radius: 0.25rem;
+}
+
+@media(min-width: 40em) {
+    /* the span 2 /2 is forcing other rows to span 2 so we move all the featured stuff to the @media query */
+    .card.featured {
+        /* have the featured span 2 rows 2 colns
+        See how the content also wraps around it due to auto-fit */
+        grid-row: span 2;
+        grid-column: span 2;
+    }
+    .card.featured .card__img {
+        /* better align the featured card */
+        aspect-ratio: 1 / 1.25;
+    }
+    .card.featured .card__title {
+        font-size: 1.75rem;
+    }
+}
+
+@media (max-width: 991px) {
+    header h1 {
+        margin: 0 5rem;
+    }
+}
