@@ -253,7 +253,22 @@
                 </div>
 
             </div>
-        </div> -->
+        </div>
+
+
+        <div class="message">
+            <h3 class="form-title">Message Us</h3>
+            <form action="message">
+                <input type="text" name="fname" placeholder="First Name">
+                <input type="text" name="sname" placeholder="Last Name">
+                <input type="text" name="email" placeholder="Email">
+                <textarea name="get-quotation" id="quotation" cols="30" rows="10" placeholder="Enter a Message"></textarea>
+                <div class="btn">
+                    <button class="send" onclick="closeMessage();">Send</button>
+                    <input type="button" value="X Cancel" id="btn_cancel">
+                </div>
+            </form>
+        </div>
 
 
     </main>
@@ -307,24 +322,24 @@
         </p>
     </footer>
 
-    <!-- <script src="../../js/app.js"></script>
-        TODO: add the contact us btn
-     -->
+    <script src="../../js/app_sm.js"></script>
+    <!-- TODO: add the contact us btn -->
+
     <script src="../../js/smallToBig.js"></script>
 
 
     <!-- draggable section start -->
-    <!-- 
-        TODO: Add this later
-        <script src="https://code.jquery.com/jquery-1.12.4.js"></script>
+
+    <!-- TODO: Add this later -->
+    <script src="https://code.jquery.com/jquery-1.12.4.js"></script>
     <script src="https://code.jquery.com/ui/1.12.1/jquery-ui.js"></script>
     <script>
         $(function() {
             $(".message").draggable();
 
         });
-    </script> 
--->
+    </script>
+
     <!-- draggable section End -->
 </body>
 
