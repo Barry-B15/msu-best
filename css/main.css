@@ -181,6 +181,7 @@ input {
 
 button,
 .request-price,
+#send,
 #btn_cancel {
     width: 8em;
     max-width: 10rem;
@@ -194,8 +195,13 @@ button,
     border-radius: 10px;
 }
 
+#send:hover,
 button:hover {
     color: var(--accent-clr);
+}
+
+.request-price:hover {
+    color: var(--secondary-clr-light);
 }
 
 #cancel {

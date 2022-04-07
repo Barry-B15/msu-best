@@ -137,9 +137,14 @@
                 </div>
             </article>
 
-            <div class="message">
+            <div class="message" id="msg">
                 <h3 class="form-title">Message Us</h3>
-                <form action="message">
+                <!-- 
+                This form is now being dynamically built so I can reuse in many places.
+                This one works fine but the dynamic one is still a little buggy
+                Send button needs fixing
+             -->
+                <!-- <form action="message">
                     <input type="text" name="fname" placeholder="First Name">
                     <input type="text" name="sname" placeholder="Last Name">
                     <input type="text" name="email" placeholder="Email">
@@ -148,7 +153,7 @@
                         <button class="send" onclick="closeMessage();">Send</button>
                         <input type="button" value="X Cancel" id="btn_cancel">
                     </div>
-                </form>
+                </form> -->
             </div>
         </main>
     </div>
