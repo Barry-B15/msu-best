@@ -156,5 +156,3 @@ function cancelForm() {
     message.style.top = null;
 }
 // End form handle
-
-// build a dynamic form

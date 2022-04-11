@@ -227,8 +227,14 @@
                     <div class="card__content">
                         <h2 class="card__title">Kitchen Cabinet</h2>
                         <p class="card__ref">Ref No: MSU-W2WCAB-BRN</p>
-                        <p class="card__price">Price: Ask</p>
+
                         <p class="description">Description</p>
+                        <!-- Contact Us btn -->
+                        <!-- <p class="card__price"> </p> -->
+                        <input type="button" value="Request Price" class="request-price">
+
+
+
                     </div>
                 </div>
                 <div class="card stacked ">
@@ -256,9 +262,9 @@
         </div>
 
 
-        <div class="message">
+        <div class="message" id="msg">
             <h3 class="form-title">Message Us</h3>
-            <form action="message">
+            <!-- <form action="message">
                 <input type="text" name="fname" placeholder="First Name">
                 <input type="text" name="sname" placeholder="Last Name">
                 <input type="text" name="email" placeholder="Email">
@@ -267,7 +273,7 @@
                     <button class="send" onclick="closeMessage();">Send</button>
                     <input type="button" value="X Cancel" id="btn_cancel">
                 </div>
-            </form>
+            </form> -->
         </div>
 
 
@@ -322,15 +328,16 @@
         </p>
     </footer>
 
+    <!-- <script src="../../js/app.js"></script> -->
+
     <script src="../../js/app_sm.js"></script>
-    <!-- TODO: add the contact us btn -->
 
     <script src="../../js/smallToBig.js"></script>
 
 
     <!-- draggable section start -->
 
-    <!-- TODO: Add this later -->
+    <!-- TODO: Make form draggable on small screens -->
     <script src="https://code.jquery.com/jquery-1.12.4.js"></script>
     <script src="https://code.jquery.com/ui/1.12.1/jquery-ui.js"></script>
     <script>
